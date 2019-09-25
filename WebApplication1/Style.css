@@ -1,0 +1,63 @@
+﻿body {
+    background-image: url('Images/3-15.jpg');
+    background-size: 100%;
+    color: grey;
+    font-family: 'RobotoDraft', 'Roboto', sans-serif;
+    font-size: 14px;
+    -webkit-font-smoothing: antialiased;
+}
+.card{
+    text-align: center;
+    width: 50%;
+    margin-top: 10px;
+    padding: 30px 0 30px 0;
+    box-sizing: border-box;
+}
+.cardSmall {   
+    width:50%;    
+    text-align:center;  
+    margin-top: 10px;  
+    box-sizing: border-box;   
+}
+.title {
+    text-align:center;
+    position: relative;
+    padding: 10px 0 10px 0px;
+    color: #ed2553;
+    font-size: 28px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+.loginDetails{
+    position: relative;
+    margin: 0 0 35px;
+    padding: 10px 0 10px 50px;
+    color: black;
+    font-size: 20px;
+  }
+.h1{    
+    text-shadow: 2px 2px;
+    position: relative;
+    padding: 10px 0 10px 0px;
+    color: #ed2553;
+    font-size: 32px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+#txtButton{    
+    padding: 5px 5px 5px 5px;
+ }
+#txtButton:hover{    
+    background-color : lightpink;
+}
+#txtPassword:hover{
+    background-color:lightpink;
+}
+
+#txtName:hover{
+    background-color:lightpink;
+}
+p{
+    padding-left:75%;
+    padding-top:93px;
+}

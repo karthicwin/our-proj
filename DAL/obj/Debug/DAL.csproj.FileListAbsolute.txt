@@ -1,0 +1,8 @@
+C:\Users\805473\Desktop\project\WebApplication1\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\805473\Desktop\project\WebApplication1\DAL\bin\Debug\DAL.dll.config
+C:\Users\805473\Desktop\project\WebApplication1\DAL\bin\Debug\DAL.dll
+C:\Users\805473\Desktop\project\WebApplication1\DAL\bin\Debug\DAL.pdb
+C:\Users\805473\Desktop\project\WebApplication1\DAL\bin\Debug\Model.dll
+C:\Users\805473\Desktop\project\WebApplication1\DAL\bin\Debug\Model.pdb
+C:\Users\805473\Desktop\project\WebApplication1\DAL\obj\Debug\DAL.dll
+C:\Users\805473\Desktop\project\WebApplication1\DAL\obj\Debug\DAL.pdb

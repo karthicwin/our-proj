@@ -1,0 +1,133 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="WebApplication1.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <%-- bootstap.min.css --%>
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+    
+    <title><%: Page.Title %> - My ASP.NET Application</title>
+    
+    <%-- added script--%>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+   
+     <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+</head>
+<body>
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see http://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="respond" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+
+                <%-- ui defined by team --%>
+        <div class="container register">
+            <div class="row">
+                <div class="col-md-3 register-left">
+                   <%-- <img src="images/rocket_icon.png" height="100" width="100"  />--%>
+                    <img src="images/images.png"  height="100" width="100"/>
+                    <h3>Welcome to Courier Services</h3>
+                    <p>You are seconds away from taking your business further and faster!</p>
+                     <%
+                        try
+                        {
+                                switch (Session["Role"].ToString())
+                                {
+                                    case "User":
+                    %>
+                                   
+                                              <input type="submit" name="" value="Home" /><br />
+                                              <input type="submit" name="" value="Packages" /><br />
+                                              <input type="submit" name="" value="Profile" /><br />
+                                              <input type="submit" name="" value="Logout" /><br />
+                                     
+                    <% break;
+                        case "Admin":
+                    %>
+
+                                   
+                                              <input type="submit" name="" value="Home" /><br />
+                                              <input type="submit" name="" value="Profile" /><br />
+                                              <input type="submit" name="" value="Notifications" /><br />
+                                              <input type="submit" name="" value="Logout" /><br />
+                      <% break;
+                        case "Staff":
+                    %>
+
+                                   
+                                              <input type="submit" name="" value="Home" /><br />
+                                              <input type="submit" name="" value="Profile" /><br />
+                                              <input type="submit" name="" value="Notifications" /><br />
+                                              <input type="submit" name="" value="Logout" /><br />
+                        <% break;
+                        default :
+                    %>
+
+                                   
+                                              <input type="submit" name="" value="Login" /><br />
+                                              <input type="submit" name="" value="Register" /><br />
+                                             
+                                   
+                    <%     break;
+                                }
+                            
+                        }
+                        catch
+                        {
+
+                        }
+
+                    %>
+     
+                </div>
+
+                <div class="col-md-9 register-right">
+                    <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="User-tab" data-toggle="tab" href="#User" role="tab" aria-controls="User" aria-selected="true">User</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="Staff-tab" data-toggle="tab" href="#Staff" role="tab" aria-controls="Staff" aria-selected="false">Staff</a>
+                        </li>
+                         <li class="nav-item">
+                            <a class="nav-link" id="Admin-tab" data-toggle="tab" href="#Admin" role="tab" aria-controls="Admin" aria-selected="false">Admin</a>
+                        </li>
+                    </ul>
+          
+                    <div class="container body-content">
+                        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                            
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </div>
+            </div>
+        </div>            
+    </form>
+</body>
+</html>
